@@ -1,0 +1,3 @@
+[submodule "mobile"]
+	path = mobile
+	url = https://github.com/DavidSolomon22/plant-check-mobile.git
