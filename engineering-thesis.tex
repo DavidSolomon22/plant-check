@@ -1,14 +1,149 @@
-\documentclass{article}
-\usepackage[utf8]{inputenc}
+% \title{Praca Inżynierska}
+% \author{Jacek Eichler \\ David Solomon \\ Stanisław Kucznerowicz}
 
-\title{Praca Inżynierska}
-\author{jacekeichler }
-\date{December 2020}
+\documentclass[12pt,oneside,a4paper]{book} % jednostronnego
 
+
+\usepackage{polski}
+\usepackage[utf8]{inputenc} %opcja dla edytorów kodujących polskie znaki w utf8
+%\usepackage[cp1250]{inputenc} %opcja dla edytorów kodujących polskie znaki w windows-1250
+\usepackage{lmodern}
+\usepackage{indentfirst}
+\usepackage{microtype}
+\DisableLigatures{encoding = *, family = * }
+\usepackage{fancyhdr}
+\usepackage{pstricks,graphicx}
+\usepackage{amssymb}
+\def\bibname{Literatura}% zmienia nazwę Bibliografia na literatura
+
+
+%---------------Zbiory liczbowe
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\K}{\mathbb{K}}
+\newcommand{\C}{\mathcal{C}}
+\newcommand{\p}{\mathcal{P}}
+%------------kwantyfikatory--------------
+\newcommand{\fal}{\mbox{{\Large $\forall\,$}}}
+\newcommand{\ext}{\mbox{{\Large $\exists\,$}}}
+%------------------definicje środowisk-----------------
+\usepackage{theorem}
+\theoremstyle{break}
+\theorembodyfont{\it}
+\newtheorem{twr}{Twierdzenie}[chapter]
+\newtheorem{lem}{Lemat}[chapter]
+\theorembodyfont{\rm}
+\newtheorem{defi}{Definicja}[chapter]
+\newtheorem{wni}{Wniosek}[chapter]
+\newtheorem{prz}{Przykład}[chapter]
+\newenvironment{dowod}{\par\vspace{0.1cm}\par{ \sc Dowód.}}{\hfill $\blacksquare$\par\vspace{0.4cm}\par}
+% ----------ustawienia wymiarow strony
+\usepackage{geometry}
+
+\newgeometry{tmargin=2.5cm, bmargin=2.5cm, headheight=14.5pt, inner=3cm, outer=2.5cm} 
+
+\linespread{1.1} %-zmiana interlinii
+
+%---------------- Normalne środowiska --------------------
+\usepackage{amsmath}
+
+%----------nagłowki i żywa pagina ------------
+\pagestyle{fancy} 
+
+%--------------- Wydruk jednostronny
+\fancyhead[C]{} 
+\fancyfoot[C]{\thepage}
+\fancyhead[L]{\scriptsize\leftmark}
+\fancyhead[R]{\scriptsize\rightmark}
+
+\renewcommand{\chaptermark}[1]{%
+\markboth{\MakeUppercase{%
+\chaptername}\ \thechapter.%
+\ #1}{}}
+
+\renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}
+
+
+\usepackage{lipsum} %------ Można usunąć przy pisaniu pracy
+%-----------------właściwa część pracy-----------------
 \begin{document}
+\thispagestyle{empty}
+\begin{center}{\sc \Large
+Politechnika Poznańska \\
+{\large
+WYDZIAŁ INFORMATYKI I TELEKOMUNIACJI \\
+Instytut informatyki \\ 
+Kierunek Informatyka
+}
+\end{center}
+\vspace{5cm}
+\begin{center}
+{\LARGE
+APLIKACJA MOBILNA DO ROZPOZNAWANIA ROŚLIN \\
+}\par\vspace{1cm}\par
+{\large
+Jacek Eichler \\ David Solomon \\ Stanisław Kucznerowicz
+}
+\end{center}
+\vspace{4cm}
+\begin{flushright}
+%praca dyplomowa\\
+praca inżynierska\\
+napisana pod kierunkiem\\
+dr inż. Marek Kraft
+\end{flushright}
+\vfill
+\begin{center}
+Poznań 2021
+\end{center}
 
-\maketitle
+\newpage
 
-\section{Introduction}
+% \vspace*{16cm}
+\chapter*{Streszczenie}
+
+Aktualnie na całym świecie można zanotować tendencje wzrostową rynku roślin doniczkowych. Bardzo często gdy kupujemy bądź dostajemy w ramach prezentu jakąś roślinę, to nie wiemy tak naprawdę jakiego jest ona rodzaju. W związku z tym właściciele takich nierozpoznanych roślin, nie wiedzą jaką przyjąć stategię przy ich pielęgnacji. Kolejnym problemem jest sam proces indetyfikacji, gdyż w przypadku braku informacji o typie rośliny, należałoby skorzystać z wiedzy eksperckiej lub książki florystycznej, aby ją rozpoznać. \par \vspace{0.2cm}
+Próbą rozwiązania tego problemu ma być aplikacja mobilna służąca do identyfikacji roślin. Jej użytkownicy poprzez wykonanie zdjęcia przy jej użyciu, otrzymają odpowiedź z nazwą rodzaju rośliny. Kolejną funkcjonalnością aplikacji jest informacja o zalecanej pielegnacji zidentyfikowanej rośliny. Wszystkie wykonane klasyfikacje roślin będą dostępne użytkownikowi. Dzięki temu, wybrane rośliny będą mogłby być dodane do specjalnej grupy, która reprezentuje rośliny w jego domu. Aplikacja będzie inteligetnie informowała  użytkownika o konieczności pielęgnacji rośliny.
+
+\thispagestyle{empty} \setcounter{page}{0} \tableofcontents
+
+
+
+\thispagestyle{empty}
+
+\chapter{Wprowadzenie}
+\thispagestyle{empty}
+
+\pagestyle{fancy}
+\chapter{Część teoretyczna}
+\thispagestyle{empty}
+
+\pagestyle{fancy}
+\chapter{Założenia i sformułowanie wymagań}
+\thispagestyle{empty}
+\pagestyle{fancy}
+\chapter{Architektura systemu}
+\thispagestyle{empty}
+\pagestyle{fancy}
+\chapter{Dokumentacja projektowa}
+\thispagestyle{empty}
+\pagestyle{fancy}
+\chapter{Dokumentacja programowa}
+\thispagestyle{empty}
+\pagestyle{fancy}
+\chapter{Testowanie i integrowanie oprogramowania}
+\thispagestyle{empty}
+\pagestyle{fancy}
+\chapter{Dokumentacja użytkowa}
+\thispagestyle{empty}
+\pagestyle{fancy}
+\chapter{Podsumowanie}
+\thispagestyle{empty}
+
+
+\begin{thebibliography}{00}
+\addcontentsline{toc}{chapter}{Literatura}
+
+\end{thebibliography}
 
 \end{document}
