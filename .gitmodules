@@ -4,3 +4,6 @@
 [submodule "server"]
 	path = server
 	url = git@github.com:DavidSolomon22/plant-check-server.git
+[submodule "ai"]
+	path = ai
+	url = git@github.com:DavidSolomon22/plant-check-ai.git
