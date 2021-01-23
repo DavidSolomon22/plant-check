@@ -7,3 +7,6 @@
 [submodule "ai"]
 	path = ai
 	url = git@github.com:DavidSolomon22/plant-check-ai.git
+[submodule "image-scraper"]
+	path = image-scraper
+	url = https://github.com/DavidSolomon22/plant-check-image-scraper.git
