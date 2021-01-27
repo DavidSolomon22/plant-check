@@ -1,1 +1,3 @@
 # plant-check
+
+Mobile application that recognizes plants and shares information about how to take care of them. In order to access the application, the user is required to create an account, which enables usage of the application on several mobile devices. Using a camera on his mobile device, the user can take a photo of the selected plant and classify it using the app. Plant recognition is possible through the use of machine learning. The predictions are saved in the system, what allows the user to access them later. In addition, each recognized plant is enriched with information about its proper care, including the amount of water needed or the required level of sunlight.
